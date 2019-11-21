@@ -1,0 +1,27 @@
+<Box01>:
+    canvas:
+        Color:
+            rgb: 1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    
+    BoxLayout:
+        size_hint: 1, 1
+        width: 100
+        canvas:
+            Color:
+                rgb: 1,0,0
+            Rectangle:
+                size: self.size
+                pos: self.pos
+    
+    BoxLayout:
+        size_hint: 1, 1
+        width: 100
+        canvas:
+            Color:
+                rgb: 0,0,1
+            Rectangle:
+                size: self.size
+                pos: self.pos

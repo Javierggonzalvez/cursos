@@ -1,0 +1,7 @@
+
+Tutorial PostGre
+http://www.postgresql.org/docs/9.2/static/tutorial-sql.html
+
+Tutorial SQL
+http://www.w3schools.com/sql/default.asp
+

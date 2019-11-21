@@ -1,0 +1,15 @@
+{
+    "editor.tabSize": 4,
+    "editor.wordWrap": "wordWrapColumn",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.vscode": true
+    },
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.autoIndent": true,
+    "editor.lineNumbers": "on",
+    "editor.wordWrapColumn": 79,
+}

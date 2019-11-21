@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Carga bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <title>Checkboc y Radio Buttons</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="">
+                    <h4>Checkbox</h4>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" value="opcion1"> Opción 1
+                        </label>
+                    </div>
+
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input type="checkbox" value="opcion2" disabled> Opción 2
+                        </label>
+                    </div>
+
+                    <hr>
+
+                    <h4>Radio Buttons</h4>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input type="radio" name="sexo" id="hombre" value="hombre" disabled> Hombre
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" name="sexo" id="mujer" value="mujer"> mujer
+                        </label>
+                    </div>
+                    
+                    <hr>
+
+                    <h4>Checkbox Inline</h4>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input type="checkbox" value="opcion1"> Opción 1
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline disabled">
+                        <label class="form-check-label">
+                            <input type="checkbox" value="opcion2" disabled> Opción 2
+                        </label>
+                    </div>
+
+                    <hr>
+
+                    <h4>Radio Buttons Inline</h4>
+                    <div class="form-check form-check-inline disabled">
+                        <label class="form-check-label">
+                            <input type="radio" name="sexo" id="hombre" value="hombre" disabled> Hombre
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" name="sexo" id="mujer" value="mujer"> mujer
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

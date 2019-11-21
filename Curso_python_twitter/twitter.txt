@@ -1,0 +1,10 @@
+Javi: Mi 1 mensaje:2018-02-18:1:4
+Toni: Mi 2 mensaje:2018-02-18:0:0
+Tere: Mi 3 mensaje:2018-02-18:4:2
+Tami: Mi 4 mensaje:2018-02-18:2:4
+Josep: Mi 5 mensaje:2018-02-18:4:1
+Pako: Mi 6 mensaje:2018-02-18:1:1
+Andres: Mi 7 mensaje:2018-02-18:1:2
+jhonny: cogio su fusil:2018-01-02:10:15
+jhonny: cogio su fusil:2018-01-02:10:15
+s:ase:2018-02-18:1:2a:seaaaa:2018-02-18:3:2

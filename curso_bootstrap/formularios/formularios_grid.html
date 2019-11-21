@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Carga bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <title>Formularios Grid</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <form action="">
+                    <div class="form-group row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="pass">Contraseña</label>
+                            <input type="password" class="form-control" placeholder="password" name="pass" id="pass">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+                        </div>
+
+                        <div class="col-12 col-md-3 mb-3">
+                            <label>Sexo</label>
+                            <div class="form-check">
+                                <label for="form-check-label">
+                                    <input type="radio" name="sexo" id="hombre" class="form-check input mr-2">Hombre
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label for="form-check-label">
+                                    <input type="radio" name="sexo" id="mujer" class="form-check input mr-2">Mujer
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-3 mb-3">
+                            <label for="pais">País</label>
+                            <select name="pais" id="pais" class="form-control">
+                                <option value="mexico">Mexico</option>
+                                <option value="argentina">Argentina</option>
+                                <option value="colombia">Colombia</option>
+                            </select>
+                        </div>
+                    </div>                 
+
+                    <div class="form-group row">
+                        <div class="col-12 text-center mb-3">
+                            <label for="form-check-label">
+                                <input type="checkbox" name="terminos" id="terminos" class="form-check input mr-2">Acepta,
+                                terminos y condiciones?
+                            </label>
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-sm-9 col-md-4">
+                                    <button class="btn btn-primary btn-block" type="submit">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Carga bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <title>Navs</title>
+
+    <style>
+        .fm-nav a {
+            color: white;
+            padding: 15px;
+        }
+        .fm-nav a:hover{
+            background: rgba(255, 255, 255, .1);
+        }
+        .fm-nav .disabled{
+            color: rgba(255, 255, 255, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="co-12 mt-4">
+                <h3>Menu con ul</h3>
+                <hr>
+                <ul class="nav bg-dark">
+                    <li class="nav-item"><a href="#" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Proximamente</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                </ul>
+                <hr>
+            </div>
+
+            <hr>
+
+            <div class="co-12 mt-4">
+                <h3>Menu con Estilos CSS</h3>
+                <hr>
+                <ul class="nav fm-nav bg-dark">
+                    <li class="nav-item"><a href="#" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link disabled">Proximamente</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                </ul>
+                <hr>
+            </div>
+
+            <hr>
+
+            <div class="co-12 mt-4">
+                <h3>Menu con Navs</h3>
+                <hr>
+                <nav class="nav">
+                    <a href="#" class="nav-link active">Inicio</a>
+                    <a href="#" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link disabled">Proximamente</a>
+                    <a href="#" class="nav-link">Contacto</a>
+                </nav>
+                <hr>
+            </div>
+
+            <div class="co-12 mt-4">
+                <h3>Menu Vetical</h3>
+                <hr>
+                <nav class="nav flex-column fm-nav bg-dark">
+                    <a href="#" class="nav-link active">Inicio</a>
+                    <a href="#" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link disabled">Proximamente</a>
+                    <a href="#" class="nav-link">Contacto</a>
+                </nav>
+                <hr>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

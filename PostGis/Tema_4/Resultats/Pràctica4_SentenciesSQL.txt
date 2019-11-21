@@ -1,0 +1,105 @@
+#Sentències SQL pràctica final (Curs SQL PostGIS)
+#Francesc Calaf
+
+#Actualitzar Sistema de referència a ETRS89 (25831)
+SELECT UpdateGeometrySRID('arboles_monumentales','geom',25831);
+SELECT UpdateGeometrySRID('linia_costa','geom',25831);
+SELECT UpdateGeometrySRID('municipios','geom',25831);
+SELECT UpdateGeometrySRID('pein','geom',25831);
+
+#1) Obtener un listado donde aparezca la distancia media entre todos los árboles monumentales de la misma especie.
+
+SELECT t1.especie, avg(ST_Distance(t1.geom, t2.geom)) as Media FROM arboles_monumentales t1, arboles_monumentales t2 GROUP BY t1.especie ORDER BY t1.especie;
+
+#2) Obtener un listado con los municipios que tienen parte de su territorio dentro de algún espacio PEIN de más de 20.000ha. En el listado debe aparecer, como mínimo, el nombre del municipio, el nombre del espacio pein y la superficie del espacio PEIN. 
+
+SELECT municipios.nombre as NomMunicipi, AreaGran.nombre as NomPein, St_Area(AreaGran.geom)/1000 as AreaPein
+FROM municipios, 
+	(
+	SELECT nombre, geom 
+	FROM pein 
+	WHERE (St_Area(pein.geom)/10000 > 20000)
+	)as AreaGran
+WHERE St_Intersects(municipios.geom, AreaGran.geom)=true
+ORDER BY NomMunicipi;
+
+#3) Obtener un listado donde aparezca una relación de municipios con el número de árboles monumentales que le pertenecen.
+
+SELECT ContarArbres.nombre as Municipi, count(*) as NumArbres 
+from
+	(select municipios.nombre from municipios, arboles_monumentales
+         Where st_contains(municipios.geom, arboles_monumentales.geom)=true
+         ) as ContarArbres
+GROUP BY ContarArbres.nombre
+ORDER BY ContarArbres.nombre;
+
+#4) Obtener un listado de las comarcas de cataluña junto con el número de árboles monumentales que contiene de cada especie.
+
+SELECT t1.comarca, t1.especie, count(*)
+FROM arboles_monumentales t1 
+GROUP BY t1.comarca, t1.especie 
+ORDER BY t1.comarca;
+
+#5) Elaborar un listado de los árboles monumentales que se encuentran a más de 2km de cualquier espacio de interés natural.
+
+SELECT arboles_monumentales.gid, arboles_monumentales.nombre
+FROM arboles_monumentales,
+	(
+	SELECT St_Union(pein.geom) as geom
+	FROM pein
+	) As TotPein
+WHERE St_Intersects(TotPein.geom, St_Buffer(arboles_monumentales.geom, 2000))=false
+ORDER BY arboles_monumentales.nombre;
+
+#6) Establecer una zona de influencia marítima a 1.000 metros de la línea de costa en dirección interior. Es decir, la zona de influencia no debe adentrase en el mar.
+
+SELECT St_Intersection(UnionMun.geom, Buffer.geom) as Influencia
+FROM
+	(
+	SELECT St_Union(municipios.geom) As geom 
+	FROM municipios
+	) As UnionMun,
+	(
+	SELECT St_Buffer(linia_costa.geom,1000) As geom
+	FROM linia_costa
+	) As Buffer
+;
+
+#7) Obtener un listado donde aparezca la densidad de árboles monumentales por unidad de superficie para los municipios que tienen algún árbol monumental.
+
+SELECT municipios.nombre as NomMunicipi, ResultatContar.NumArbres, ResultatContar.NumArbres/St_Area(municipios.geom) as Densitat
+FROM
+municipios,
+	(
+	SELECT ContarArbres.municipio, count(*) as NumArbres
+	from
+		(select municipios.municipio, municipios.geom from municipios, arboles_monumentales
+		Where st_contains(municipios.geom, arboles_monumentales.geom)=true
+		) as ContarArbres
+	GROUP BY ContarArbres.municipio
+	ORDER BY ContarArbres.municipio
+	) As ResultatContar
+WHERE municipios.municipio = ResultatContar.municipio
+ORDER BY municipios.nombre;
+
+#8) Obtener un listado donde aparezcan las provincias de cataluña con los km's de costa de cada una de ellas.
+
+SELECT Provincies.provincia as CodiProvincia, St_Length2D(St_Intersection(Provincies.geom,linia_costa.geom))/1000 as KmCosta
+FROM linia_costa,
+	(
+	SELECT provincia, St_Collect(municipios.geom) as geom
+	FROM municipios
+	GROUP BY provincia
+	) as Provincies
+ORDER BY Provincies.provincia;
+
+#9) Realizar un buffer de 500 metros sobre los islotes de la costa catalana. Los islotes se pueden obtener a partir de las geometrías de los municipios. Ningún islote estará a más de 5000 de la línea de costa.
+
+SELECT St_Buffer(DumpGeom.geom,500)
+FROM linia_costa,
+	(
+	SELECT (St_Dump(St_Union(municipios.geom))).geom
+	FROM municipios
+	) AS DumpGeom
+WHERE St_Distance(St_Centroid(DumpGeom.geom),linia_costa.geom)<5000;
+

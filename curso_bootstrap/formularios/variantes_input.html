@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Carga bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <title>Variantes de Input</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <h2>Tamaños Input</h2>
+                <hr>
+                <form action="">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input class="form-control form-control-lg" type="text" name="nombre" id="nombre" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input class="form-control" type="text" name="correo" id="correo" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI</label>
+                        <input class="form-control form-control-sm" type="text" name="dni" id="dni" placeholder="DNI">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row mt-3">
+            <div class="col">
+                <h2>Estados ReadOnly y Disabled</h2>
+                <hr>
+                <form action="">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="No puedes modificar este texto" readonly>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="correo" id="correo" placeholder="Deshabilitado" disabled>
+                    </div>
+                    <div class="form-group">
+                        <select name="" id="" class="form-control" disabled>
+                            <option value="1">Select deshabilitado</option>
+                        </select>
+                    </div>
+                    <div class="form-goup">
+                        <label>
+                            <input type="radio" name="" id="" disabled> Radio Button Disable
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <!-- END Container -->
+    </div> 
+    
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

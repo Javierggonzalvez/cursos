@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Carga bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <title>Grupos de Listas 2</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-4">
+                <div class="list-group" id="lista" role="tablist">
+                    <a href="#elemento1" class="list-group-item list-group-item-action active" data-toggle="list" role="tab" aria-controls="elemento1">Elemento 1</a>
+                    <a href="#elemento2" class="list-group-item list-group-item-action" data-toggle="list" role="tab" aria-controls="elemento2">Elemento 2</a>
+                    <a href="#elemento3" class="list-group-item list-group-item-action" data-toggle="list" role="tab" aria-controls="elemento3">Elemento 3</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="elemento1" role="tabpanel" aria-labelledby="elemento1">
+                        <h3>Titulo #1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus, eveniet, cumque tempora esse aliquid, pariatur assumenda cum earum quod accusantium maiores corrupti eum! Similique fugit debitis dolores deserunt at!</p>
+                    </div>
+                
+                    <div class="tab-pane fade show" id="elemento2" role="tabpanel" aria-labelledby="elemento2">
+                        <h3>Titulo #2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus, eveniet, cumque tempora esse aliquid, pariatur assumenda cum earum quod accusantium maiores corrupti eum! Similique fugit debitis dolores deserunt at!</p>
+                    </div>
+                    <div class="tab-pane fade show" id="elemento3" role="tabpanel" aria-labelledby="elemento3">
+                        <h3>Titulo #3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus, eveniet, cumque tempora esse aliquid, pariatur assumenda cum earum quod accusantium maiores corrupti eum! Similique fugit debitis dolores deserunt at!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

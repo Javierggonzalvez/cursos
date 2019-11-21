@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang='es'>
+
+<head>
+    <title>Mi primera Web</title>
+</head>
+
+<body>
+    <h1>Título de mi Web</h1>
+    <h2>Bienvenidos a mi Web</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel
+        nunc scelerisque neque porttitor porta. Pellentesque habitant morbi
+        tristique senectus et netus et malesuada fames ac turpis egestas.
+        Proin dapibus, diam sed sagittis volutpat, purus augue tempus tortor,
+        in malesuada libero est ac justo. Integer ac euismod mauris, ut tempus
+        metus.<br /> Pellentesque imperdiet condimentum pretium. Vestibulum
+        non
+        pharetra dolor. Phasellus eget condimentum tellus. Sed ultrices
+        commodo diam, non vestibulum sapien aliquam ac. Nulla egestas sodales
+        laoreet.
+    </p><br />
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel
+        nunc scelerisque neque porttitor porta. Pellentesque habitant morbi
+        tristique senectus et netus et malesuada fames ac turpis egestas.
+        Proin dapibus, diam sed sagittis volutpat, purus augue tempus tortor,
+        in malesuada libero est ac justo. Integer ac euismod mauris, ut tempus
+        metus. Pellentesque imperdiet condimentum pretium. Vestibulum non
+        pharetra dolor. Phasellus eget condimentum tellus. Sed ultrices
+        commodo diam, non vestibulum sapien aliquam ac. Nulla egestas sodales
+        laoreet.
+    </p><br />
+    <hr />
+
+    <h2>Imagenes en HTML</h2>
+    <img src="imagenes/perro.jpeg" all="Imagen de un perro" title="foto de un perro"
+        width="450px" />
+
+
+    <hr />
+    <h3> 3er encabezado de la página</h3>
+    <p>
+        <i>Lorem ipsum dolor sit amet</i>, consectetur adipiscing elit. Aenean
+        vel
+        nunc scelerisque neque porttitor porta. Pellentesque habitant morbi
+        tristique senectus et netus et malesuada fames ac turpis egestas.
+        Proin dapibus, diam sed sagittis volutpat, purus augue tempus tortor,
+        in malesuada libero est ac justo. Integer ac euismod mauris, ut tempus
+        metus.
+        <blockquote>
+            <hr /> <strong>Pellentesque imperdiet condimentum pretium.
+                Vestibulum
+                non
+                pharetra dolor.</strong> Phasellus eget condimentum tellus.
+            <em>Sed
+                ultrices
+                commodo diam, non vestibulum sapien aliquam ac.</em> Nulla
+            egestas
+            <span id="resaltado" class="rojo amarillo">sodales
+                laoreet.</span></blockquote>
+    </p>
+    <h3>Lista frutas Ordenada</h3>
+    <ol>
+        <li>Manzana</li>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ol>
+    <br />
+    <h3>Lista frutas sin orden</h3>
+    <ul>
+        <li>Manzana</li>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ul>
+
+    <ul>
+        <li>Manzana
+            <ul>
+                <li>Roja</li>
+                <li>Verde</li>
+            </ul>
+        </li>
+        <li>Naranja</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ul>
+    <hr />
+
+    <h3>TABLAS</h3>
+
+    <table border="1">
+        <tr>
+            <th>nombre</th>
+            <th>apellidos</th>
+            <th>país</th>
+        </tr>
+        <tr>
+            <td>Javi</td>
+            <td>Garcia</td>
+            <td>Espanya</td>
+        </tr>
+        <tr>
+            <td>Javi</td>
+            <td colspan="2">Garcia</td>
+
+        </tr>
+
+    </table>
+
+    <hr />
+
+    <h3>Formulario</h3>
+    <form>
+        <p>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" placeholder="Escriba su nombre..." />
+        </p>
+        <br />
+        <p>
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion"></textarea>
+        </p>
+        <br />
+        <input type="radio" name="genero" value="hombre">Hombre<br />
+        <input type="radio" name="genero" value="mujer">Mujer<br />
+        <input type="radio" name="genero" value="indefinido">Indefinido<br />
+        <br />
+
+        <select>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="NS">Indefinido</option>
+        </select>
+
+        <br />
+
+        <input type="submit" value="Enviar formulario" />
+
+
+    </form>
+
+
+</body>
+
+
+</html>

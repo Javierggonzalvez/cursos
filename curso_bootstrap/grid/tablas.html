@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Carga bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <title>Tablas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- 
+                .table-dark Permite cambiar colores de la tabla a oscuros
+                .table-striped Permite alternar colores entre cada fila
+                .table-bordered Permite agregar bordes
+                .table-hover Permitehacer la tabla mas peq. eliminando paddings
+                .table-responsive-xx Permite adaptar la tabla a dispositivos moviles 
+                -->
+                <table class="table table-sm table-hover table-bordered table-responsive-lg">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>País</th>
+                        </tr>
+                    </thead>
+                    <!--
+                    .table-active
+                    .table-success
+                    .table-warning 
+                    .table-danger 
+                    .table-info
+                    -->
+                    <tr class="table-success">
+                        <td>Carlos</td>
+                        <td>21</td>
+                        <td>Mexico</td>
+                    </tr>
+                    <!-- 
+                    .bg-primary 
+                    .bg-success 
+                    .bg-warning 
+                    .bg-danger 
+                    .bg-info
+                    -->
+                    <tr class="bg-primary text-white">
+                        <td>Alejandro</td>
+                        <td>34</td>
+                        <td>España</td>
+                    </tr>
+                    <tr>
+                        <td>Cesar</td>
+                        <td>37</td>
+                        <td>Colombia</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col py-5 text-center">
+                <h2>Formulario de Pago</h2>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, placeat accusantium. Eius iste earum illo nesciunt. Odio accusantium quae aut? Consectetur alias dignissimos accusantium minima beatae illo iste ex reiciendis!
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-8 order-2 order-md-1">
+                <h4 class="mb-3">Dirección de Envio</h4>
+                <form action="">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-3">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-comtrol" id="nombre" name="nombre">
+                        </div>
+                        <div class="col-12 col-sm-6 mb-3">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" class="form-comtrol" id="apellido" name="apellido">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="usuario">Usuario</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <input type="text" id="usuario" class="form-control" placeholder="Usuario" name="usuario">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="correo">Correo<span class="text-muted">(Opcional)</span></label>
+                        <input type="email" class="form-control" name="correo" placeholder="nombre@email.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" class="form-control" name="direccion" placeholder="123 Calle Principal">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="direccion2">Dirección 2</label>
+                        <input type="text" class="form-control" name="direccion2" placeholder="Interior o información addcional">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <label for="pais">País</label>
+                            <select name="pais" id="pais" class="custom-select d-block w-100">
+                                <option value="">Seleccionar País</option>
+                                <option value="mexico">Mexico</option>
+                                <option value="españa">España</option>
+                                <option value="chile">Chile</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-4 mb-3">
+                            <label for="estado">Estado</label>
+                            <select name="estado" id="estado" class="custom-select d-block w-100">
+                                <option value="">Seleccionar Estado</option>
+                                <option value="">-</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-4 mb-3">
+                            <label for="codigo-postal">Códogo Postal</label>
+                            <input type="text" id="codigo-postal" class="form-control">
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="misma-direccion">
+                        <label for="misma-direccion" class="custom-control-label">
+                            Enviar a la misma dirección de facturación
+                        </label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="guardar-info">
+                        <label for="guardar-info" class="custom-control-label">
+                            Guardar información para la siguiente compra
+                        </label>
+                    </div>
+
+                    <hr class="mb-4">
+
+                    <div class="d-block mb-3">
+                        <div class="custom-control custim-radio">
+                            <input type="radio" name="metodo-pago" id="tarjeta-credito" class="custom-control-input" checked>
+                            <label for="tarjeta-credito" class="custom-control-label">Tarjeta de Credito</label>
+                        </div>
+                        <div class="custom-control custim-radio">
+                            <input type="radio" name="metodo-pago" id="tarjeta-debito" class="custom-control-input">
+                            <label for="tarjeta-credito" class="custom-control-label">Tarjeta de Debito</label>
+                        </div>
+                        <div class="custom-control custim-radio">
+                            <input type="radio" name="metodo-pago" id="paypal" class="custom-control-input">
+                            <label for="tarjeta-credito" class="custom-control-label">Paypal</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-3">
+                            <label for="nombre-tarjeta">Nombre en la Tarjeta</label>
+                            <input type="text" id="nombre-tarjeta" class="form-control">
+                            <small class="test-muted">Nombre completa como se muestra en la tarjeta</small>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-3">
+                            <label for="numero-tarjeta">Número de Tarjeta</label>
+                            <input type="text" id="numero-tarjeta" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 col-sm-4 mb-3">
+                            <label for="tarjeta-expiracion">Expiración de la tarjeta</label>
+                            <input type="text" id="tarjeta-expiracion" class="form-control">
+                        </div>
+                        <div class="col-6 col-sm-4 mb-3">
+                            <label for="tarjeta-ccv">CCV</label>
+                            <input type="text" id="tarjeta-ccv" class="form-control">
+                        </div>
+                    </div>
+
+                    <hr class="mb-4">
+                    <input type="submit" value="Continuar pago" class="btn btn-block btn-lg btn-primary mb-5"> 
+                </form>
+            </div>
+
+            <div class="col-12 col-md-4 order-1 order-md-2">
+                <h4 class="mb-3 d-flex justify-content-between align-items-center">
+                    <span class="text-muted">Tu Carrito</span>
+                    <span class="badge badge-secondary badge-pill">3</span>
+                </h4>
+
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6 class="my-0">Nombre del Producto</h6>
+                            <small class="text-muted">Pequeña descripción</small>
+                        </div>
+                        <span class="text-muted">$12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6 class="my-0">Segundo Producto</h6>
+                            <small class="text-muted">Pequeña descripción</small>
+                        </div>
+                        <span class="text-muted">$8</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6 class="my-0">Tercer Producto</h6>
+                            <small class="text-muted">Pequeña descripción</small>
+                        </div>
+                        <span class="text-muted">$27</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                            <h6 class="my-0">Código Descuento</h6>
+                            <small class="text-success">CUPON EJEMPLO</small>
+                        </div>
+                        <span class="text-success">$7</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <span>Total (€)</span>                        
+                        <strong>€20</strong>
+                    </li>
+                </ul>
+                <form action="" class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Cupon">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary">Canjear</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="my-5 py-5 text-muted text-center text-small">
+            <p>@ 2019 Netyk Enterprise</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#">Privacidad</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">Terminos y condiciones</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">Soporte</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="static/js/jquery-3.4.1.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body {
+    background: url('../img/images.jpeg');
+    background-attachment: fixed;
+}
+
+#logo {
+    background: #235E30;
+}
+
+#menu ul li:hover{
+        background: #235E30;
+}
+
+.button-more {
+    background: #235E30;
+}
+
+

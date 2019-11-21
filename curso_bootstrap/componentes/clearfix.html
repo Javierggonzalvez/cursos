@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Carga bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <style>
+        .caja{
+            height: 100px;
+            width: 100px;
+            background: #000;
+        }
+    </style>
+    <title>ClearFix y Displays</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <div class="bg-primary text-white p-2 mb-4">Elemento tipo bloque</div>
+                <span class="bg-success text-white d-inline-block p-2 mb-4">Elemento de tipo línea (Convertido a inline blokc)</span>
+                <span class="bg-success text-white d-inline-block p-2 mb-4">Elemento de tipo línea (Convertido a inline blokc)</span>
+
+                <div class="bg-primary d-inline-block text-white p-2 mb-4">Elemento tipo bloque (Convertido a inline-block)</div>
+
+                <span class="bg-success text-white p-2 mb-4 d-block">Elemento de tippo linea (Convertido a block)</span>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <div class="bg-primary clearfix">
+                    <div class="caja d-inline-block float-left"></div>
+                    <div class="caja d-inline-block float-right"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

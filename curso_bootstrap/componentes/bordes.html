@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Carga bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <style>
+        .caja{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 20px;
+            border: 1px solid #000;
+        }
+
+    </style>
+
+    <title>Bordes</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-6">
+                <div class="caja bg-light"></div>
+                <div class="caja bg-light border-0"></div>
+                <div class="caja bg-light border-top-0"></div>
+                <div class="caja bg-light border-bottom-0"></div>
+                <div class="caja bg-light border-left-0"></div>
+                <div class="caja bg-light border-right-0"></div>
+            </div>
+
+            <div class="col-6">
+                <div class="caja border-primary"></div>
+                <div class="caja border-secondary"></div>
+                <div class="caja border-success"></div>
+                <div class="caja border-danger"></div>
+                <div class="caja border-warning"></div>
+                <div class="caja border-info"></div>
+                <div class="caja border-dark"></div>
+                <div class="caja border-light"></div>
+                <div class="caja border-white"></div>
+            </div>
+
+            <div class="col-6">
+                <div class="caja bg-primary border-0 rounded"></div>
+                <div class="caja bg-primary border-0 rounded-top"></div>
+                <div class="caja bg-primary border-0 rounded-right"></div>
+                <div class="caja bg-primary border-0 rounded-left"></div>
+                <div class="caja bg-primary border-0 rounded-bottom"></div>
+                <div class="caja bg-primary border-0 rounded-circle"></div>
+                <div class="caja bg-primary border-0 rounded-0"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

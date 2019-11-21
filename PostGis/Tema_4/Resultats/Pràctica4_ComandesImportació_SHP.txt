@@ -1,0 +1,7 @@
+#Comandes per Importar fitxers SHP pràctica final (Curs SQL PostGIS)
+#Francesc Calaf
+
+shp2pgsql -W "latin1" "C:\IP_DIARI\CURS_POSTGIS\Tema_4\datos_practicafinal\arboles_monumentales.shp" ARBOLES_MONUMENTALES > "C:\IP_DIARI\CURS_POSTGIS\Tema_4\Resultats\arboles_monumentales.sql"
+shp2pgsql -W "latin1" "C:\IP_DIARI\CURS_POSTGIS\Tema_4\datos_practicafinal\linea_costa.shp" LINIA_COSTA > "C:\IP_DIARI\CURS_POSTGIS\Tema_4\Resultats\linea_costa.sql"
+shp2pgsql -W "latin1" "C:\IP_DIARI\CURS_POSTGIS\Tema_4\datos_practicafinal\municipios.shp" MUNICIPIOS > "C:\IP_DIARI\CURS_POSTGIS\Tema_4\Resultats\municipios.sql"
+shp2pgsql -W "latin1" "C:\IP_DIARI\CURS_POSTGIS\Tema_4\datos_practicafinal\pein.shp" PEIN > "C:\IP_DIARI\CURS_POSTGIS\Tema_4\Resultats\pein.sql"
